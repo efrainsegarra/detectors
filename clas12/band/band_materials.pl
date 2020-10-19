@@ -11,7 +11,10 @@ sub materials
 	$mat{"description"}   = "band scintillator material";
 	$mat{"density"}       = "1.023"; # g/cm^3 or g/cc
 	$mat{"ncomponents"}   = "2";
-	$mat{"components"}    = "G4_C 0.524 G4_H 0.476";	
+	#$mat{"components"}    = "G4_C 0.524 G4_H 0.476";	
+	$mat{"components"}    = "C 5.24 H 4.76";
+	#$mat{"photonEnergy"} = "2*eV 7*eV";
+	#$mat{"birkConstant"}  = "0.126";
 	print_mat(\%configuration, \%mat);
 
 #####
