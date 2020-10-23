@@ -24,7 +24,7 @@ my @vinframe  = ($vframe_x/2-0.25, $vframe_y/2, $vframe_z/2-0.25);
 my @vframepos = ($band_xpos - 1078.9, $band_xpos - 448.3, $band_xpos + 448.3, $band_xpos + 1078.9);
 my $align_x = 0;               # mm
 my $align_y = 0;               # mm
-my $align_z = 3608.71 - 1303.27;         # mm
+my $align_z = -(3608.71 - 1303.27);         # mm
 
 my $STARTcart = -462.3;
 
@@ -35,7 +35,7 @@ sub build_bandMother
 	$detector{"mother"}      = "root";
 	$detector{"description"} = "Mother volume of BAND";
 	$detector{"pos"}         = "$align_x*mm $align_y*mm $align_z*mm";
-	$detector{"rotation"}    = "0*deg 0*deg 0*deg";
+	$detector{"rotation"}    = "0*deg 180*deg 0*deg";
 	$detector{"color"}       = "339999";
 	$detector{"type"}        = "Pgon";
 	$detector{"dimensions"}  = "-45*deg 360*deg 4*counts 3*counts 160*mm 160*mm 160*mm 1500*mm 1500*mm 1500*mm -462.3*mm 0*mm 900*mm";
@@ -142,7 +142,7 @@ sub build_scintillators
 					$detectors1{"color"}       = $colour;
 					$detectors1{"type"}        = "Tube";
 					$detectors1{"dimensions"}  = "30.035*mm 32.725*mm 88.9*mm 0*deg 360*deg";
-					$detectors1{"material"}    = "conetic";
+					$detectors1{"material"}    = "mushield";
 					$detectors1{"style"}       = 1;
 					print_det(\%configuration, \%detectors1);
 				} # pmt shields
@@ -238,7 +238,7 @@ sub build_scintillators
 					$detectors2{"color"}       = $colour;
 					$detectors2{"type"}        = "Tube";
 					$detectors2{"dimensions"}  = "30.035*mm 32.725*mm 88.9*mm 0*deg 360*deg";
-					$detectors2{"material"}    = "conetic";
+					$detectors2{"material"}    = "mushield";
 					$detectors2{"style"}       = 1;
 					print_det(\%configuration, \%detectors2);
 				} # pmt shields

@@ -15,7 +15,8 @@ sub materials
 	$mat{"description"}   = "target  rohacell scattering chamber material";
 	$mat{"density"}       = "0.1";  # 100 mg/cm3
 	$mat{"ncomponents"}   = "4";
-	$mat{"components"}    = "G4_C 0.6465 G4_H 0.0784 G4_N 0.0839 G4_O 0.1912";
+	#$mat{"components"}    = "G4_C 0.6465 G4_H 0.0784 G4_N 0.0839 G4_O 0.1912";
+	$mat{"components"}    = "G4_C 0.6429 G4_H 0.0065 G4_N 0.0973 G4_O 0.2533";
 	print_mat(\%configuration, \%mat);
 
 
@@ -45,7 +46,8 @@ sub materials
 	$mat{"description"}   = "G10 - 1.70 g/cm3";
 	$mat{"density"}       = "1.70";
 	$mat{"ncomponents"}   = "4";  # 1 Si atom, 2 Oxygen, 3 Carbon, and 3 Hydrogen
-	$mat{"components"}    = "G4_Si 0.283 G4_O 0.323  G4_C 0.364  G4_H 0.030";
+	#$mat{"components"}    = "G4_Si 0.283 G4_O 0.323  G4_C 0.364  G4_H 0.030";
+	$mat{"components"}    = "G4_Si 0.454 G4_O 0.295  G4_C 0.249  G4_H 0.002";
 	print_mat(\%configuration, \%mat);
 
 	# lHe gas

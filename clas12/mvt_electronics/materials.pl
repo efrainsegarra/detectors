@@ -20,7 +20,8 @@ sub materials
 	$mat{"description"}   = "G10 - 1.70 g/cm3";
 	$mat{"density"}       = "1.70";
 	$mat{"ncomponents"}   = "4";  # 1 Si atom, 2 Oxygen, 3 Carbon, and 3 Hydrogen
-	$mat{"components"}    = "G4_Si 0.283 G4_O 0.323  G4_C 0.364  G4_H 0.030";
+	#$mat{"components"}    = "G4_Si 0.283 G4_O 0.323  G4_C 0.364  G4_H 0.030";
+	$mat{"components"}    = "G4_Si 0.454 G4_O 0.295  G4_C 0.249  G4_H 0.002";
 	print_mat(\%configuration, \%mat);
 	
 }

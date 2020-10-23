@@ -11,8 +11,8 @@ sub materials
 	$mat{"description"}   = "band scintillator material";
 	$mat{"density"}       = "1.023"; # g/cm^3 or g/cc
 	$mat{"ncomponents"}   = "2";
-	#$mat{"components"}    = "G4_C 0.524 G4_H 0.476";	
-	$mat{"components"}    = "C 5.24 H 4.76";
+	$mat{"components"}    = "G4_C 0.915 G4_H 0.085";	
+	#$mat{"components"}    = "C 5.24 H 4.76";
 	#$mat{"photonEnergy"} = "2*eV 7*eV";
 	#$mat{"birkConstant"}  = "0.126";
 	print_mat(\%configuration, \%mat);
@@ -80,7 +80,8 @@ sub materials
 	$mat{"description"}   = "G10 - 1.70 g/cm3";
 	$mat{"density"}       = "1.70";
 	$mat{"ncomponents"}   = "4";  # 1 Si atom, 2 Oxygen, 3 Carbon, and 3 Hydrogen
-	$mat{"components"}    = "G4_Si 0.283 G4_O 0.323  G4_C 0.364  G4_H 0.030";
+	#$mat{"components"}    = "G4_Si 0.283 G4_O 0.323  G4_C 0.364  G4_H 0.030";
+	$mat{"components"}    = "G4_Si 0.454 G4_O 0.295  G4_C 0.249  G4_H 0.002";
 	print_mat(\%configuration, \%mat);
 
 	# lHe gas
@@ -99,7 +100,8 @@ sub materials
 	$mat{"description"}   = "MuShield magnetic shielding material";
 	$mat{"density"}       = "8.747";  # 0.316 lb/in^3 ~ 8747 kg/m^3
 	$mat{"ncomponents"}   = "6";
-	$mat{"components"}    = "G4_C 0.0002 G4_Ni 0.8000 G4_Mn 0.0050 G4_Mo 0.0420 G4_Si 0.0035 G4_Fe 0.1493";
+	#$mat{"components"}    = "G4_C 0.0002 G4_Ni 0.8000 G4_Mn 0.0050 G4_Mo 0.0420 G4_Si 0.0035 G4_Fe 0.1493";
+	$mat{"components"}    = "G4_C 0.00004 G4_Ni 0.78654 G4_Mn 0.00460 G4_Mo 0.06751 G4_Si 0.00165 G4_Fe 0.13966";
 	print_mat(\%configuration, \%mat);
 
 	# MuMETAL(R) 
