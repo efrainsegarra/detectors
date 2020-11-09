@@ -62,7 +62,7 @@ sub build_scintillators
 			my $y      = $band_ypos;
 			my $z      = $band_zpos;
 			my $xpos = $x;
-			my $ypos = $y - 73.69*($i-1);
+			my $ypos = $y - 73.03*($i-1);
 			my $zpos = $z - 76.75*($j-1);
 			my $xdim = $lbar_length/2;
 			my $ydim = 36;
@@ -98,6 +98,17 @@ sub build_scintillators
 					$component = $i-16;
 				}
 
+				if($i>3 && $i<=10)
+				{
+					$sector = 2;
+					$component = $i-3;
+				}
+				if($i>16)
+				{
+					$sector = 5;
+					$component = $i-16;
+				}
+
 				if($j==5 && $i>=16) {next;}
 				if($j==$NUM_LAYERS && $i>=16) {$zpos = $zpos + 72;}
 				my %detector125 = init_det();
@@ -111,7 +122,7 @@ sub build_scintillators
 				$detector125{"dimensions"}  = "$xdim*mm $ydim*mm $zdim*mm";
 				$detector125{"material"}    = "ej200";
 				$detector125{"style"}       = 1;
-				#$detector{"ncopy"}       = $barnum;
+				#$detector125{"ncopy"}       = $barnum;
 				$detector125{"sensitivity"} = "band";
 				$detector125{"hit_type"}    = "band";
 				my $id_string = join('','sector manual ',$sector,' layer manual ',$layer,' component manual ',$component);
@@ -282,7 +293,7 @@ sub build_frame
 		$detector2{"type"}        = "Box";
 		$detector2{"dimensions"}  = "$vinframe[0]*inches $vinframe[1]*mm $vinframe[2]*inches";
 		$detector2{"material"}    = "G4_AIR";
-		$detector2{"style"}       = 0;
+		$detector2{"style"}       = 1;
 		print_det(\%configuration, \%detector2);
 	}
 }
@@ -326,7 +337,7 @@ sub build_shielding
 		$detector2{"type"}        = "Box";
 		$detector2{"dimensions"}  = "$sd*inches $sy*inches $sb*inches";
 		$detector2{"material"}    = "G4_Pb";
-		$detector2{"style"}       = 0;
+		$detector2{"style"}       = 1;
 		print_det(\%configuration, \%detector2);
 
 	}

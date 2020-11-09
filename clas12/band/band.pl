@@ -8,6 +8,7 @@ use parameters;
 use geometry;
 use hit;
 use bank;
+use math;
 use materials;
 use math;
 
@@ -55,6 +56,9 @@ require "./geometry.pl";
 
 # all the scripts must be run for every configuration
 my @allConfs = ("original");
+
+# bank definitions commong to all variations
+define_bank();
 
 # bank definitions commong to all variations
 define_bank();

@@ -25,4 +25,3 @@ sub define_hit
 	$hit{"pedestal"}        = -20;
 	print_hit(\%configuration, \%hit);
 }
-
